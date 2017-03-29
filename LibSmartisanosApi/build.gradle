@@ -7,7 +7,7 @@ def VERSIONCODE = 2
 def VERSIONNAME = "1.0.2"
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '25.0.0'
 
     sourceSets {
 
