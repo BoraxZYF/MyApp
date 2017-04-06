@@ -1,4 +1,4 @@
-package com.borax.myapp.activity.view;
+package com.borax.myapp.activity.template;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,24 +10,26 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.borax.myapp.R;
-import com.borax.myapp.activity.view.view.FollowFingerView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ViewActivity extends AppCompatActivity {
+public class TemplateActivity extends AppCompatActivity {
 
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     @BindView(R.id.listview)
     ListView listview;
-    private String[] strs = new String[]{"Simple Layout", "Simple View", "Velocity Tracker", "Follow Finger View"};
+
+    private final String[] strs = new String[]{"BaiscActivity", "ButtomNavigationActivity", "EmptyActivity", "FullScreenActivity", "LoginActivity", "NabigationDrawerActivity", "SettingsActivity"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view);
+        setContentView(R.layout.activity_template);
         ButterKnife.bind(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("View Activity");
+
         setSupportActionBar(toolbar);
 
         toolbar.setNavigationIcon(R.drawable.back);
@@ -38,40 +40,73 @@ public class ViewActivity extends AppCompatActivity {
             }
         });
 
+
         initView();
 
     }
 
     private void initView() {
 
-        listview.setAdapter(new ArrayAdapter<String>(ViewActivity.this, android.R.layout.simple_list_item_1, strs));
+        listview.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, strs));
+
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 switch (i) {
-
                     case 0: {
-                        Intent intent = new Intent(ViewActivity.this, SimpleLayoutActivity.class);
+
+                        Intent intent = new Intent(TemplateActivity.this, BaiscActivity.class);
                         startActivity(intent);
+
                         break;
                     }
 
                     case 1: {
-                        Intent intent = new Intent(ViewActivity.this, SimpleViewActivity.class);
+
+                        Intent intent = new Intent(TemplateActivity.this, BottomNavigationActivity.class);
                         startActivity(intent);
+
                         break;
                     }
 
                     case 2: {
-                        Intent intent = new Intent(ViewActivity.this, VelocityTrackerAcitvity.class);
+
+                        Intent intent = new Intent(TemplateActivity.this, EmptyActivity.class);
                         startActivity(intent);
+
                         break;
                     }
 
-                    case 3:{
-                        Intent intent = new Intent(ViewActivity.this, MoveViewActivity.class);
+                    case 3: {
+
+                        Intent intent = new Intent(TemplateActivity.this, FullscreenActivity.class);
                         startActivity(intent);
+
+                        break;
+                    }
+
+                    case 4: {
+
+                        Intent intent = new Intent(TemplateActivity.this, LoginActivity.class);
+                        startActivity(intent);
+
+                        break;
+                    }
+
+                    case 5: {
+
+                        Intent intent = new Intent(TemplateActivity.this, NavigationDrawerActivity.class);
+                        startActivity(intent);
+
+                        break;
+                    }
+
+                    case 6: {
+
+                        Intent intent = new Intent(TemplateActivity.this, SettingsActivity.class);
+                        startActivity(intent);
+
                         break;
                     }
 
@@ -81,5 +116,4 @@ public class ViewActivity extends AppCompatActivity {
         });
 
     }
-
 }

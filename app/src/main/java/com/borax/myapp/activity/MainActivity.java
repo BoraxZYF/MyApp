@@ -30,6 +30,7 @@ import com.borax.myapp.activity.onstep.OneStepActivity;
 import com.borax.myapp.activity.recyclerviewpager.RecyclerViewPagerAcitivty;
 import com.borax.myapp.activity.shengchong.activity.ScActivity;
 import com.borax.myapp.activity.tablayout.TabLayoutActivity;
+import com.borax.myapp.activity.template.TemplateActivity;
 import com.borax.myapp.activity.versionupdate.VersionUpdateActivity;
 import com.borax.myapp.activity.view.ViewActivity;
 import com.borax.myapp.activity.viewpager.ViewPagerActivity;
@@ -46,7 +47,9 @@ public class MainActivity extends AppCompatActivity
 
     private final String[] strs = new String[]{"ListView", "Fragment", "View", "TabLayout", "ViewPager", "CardView"
             , "MaterialDesign", "MaterialDesign4.x", "Rebel Test", "Encrypt Retrofit Test", "MVP Test", "Lottie"
-            , "CaughtCrash", "OneStep", "Shengchong Test", "RecyclerViewPager", "Version Update", "Wave Test"};
+            , "CaughtCrash", "OneStep", "Shengchong Test", "RecyclerViewPager", "Version Update", "Wave Test"
+            , "Template Activity"
+    };
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
@@ -183,6 +186,12 @@ public class MainActivity extends AppCompatActivity
 
                                                     case 17: {
                                                         Intent intent = new Intent(MainActivity.this, WaveActivity.class);
+                                                        startActivity(intent);
+                                                        break;
+                                                    }
+
+                                                    case 18: {
+                                                        Intent intent = new Intent(MainActivity.this, TemplateActivity.class);
                                                         startActivity(intent);
                                                         break;
                                                     }
