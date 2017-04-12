@@ -3,6 +3,7 @@ package util;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.view.WindowManager;
 
 /**
  * Created by borax on 2017/2/17.
@@ -28,10 +29,20 @@ public class Util {
         SharedPreferences sp;
         sp = context.getSharedPreferences("test", Activity.MODE_PRIVATE);
 
-        return sp.getString("crash","");
+        return sp.getString("crash", "");
 
     }
 
+    public static int getScreenWidth(Context context) {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        int width = wm.getDefaultDisplay().getWidth();
+        return width;
+    }
 
+    public static int getScreenHeight(Context context) {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        int height = wm.getDefaultDisplay().getHeight();
+        return height;
+    }
 
 }

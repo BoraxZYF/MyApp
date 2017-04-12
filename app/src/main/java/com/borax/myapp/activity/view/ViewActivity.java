@@ -19,7 +19,7 @@ public class ViewActivity extends AppCompatActivity {
 
     @BindView(R.id.listview)
     ListView listview;
-    private String[] strs = new String[]{"Simple Layout", "Simple View", "Velocity Tracker", "Follow Finger View"};
+    private String[] strs = new String[]{"Simple Layout", "Simple View", "Velocity Tracker", "Follow Finger View", "ScrollView With ListView"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +69,14 @@ public class ViewActivity extends AppCompatActivity {
                         break;
                     }
 
-                    case 3:{
+                    case 3: {
                         Intent intent = new Intent(ViewActivity.this, MoveViewActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 4: {
+                        Intent intent = new Intent(ViewActivity.this, ScrollViewWithListViewActivity.class);
                         startActivity(intent);
                         break;
                     }

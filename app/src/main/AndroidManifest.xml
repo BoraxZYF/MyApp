@@ -182,7 +182,9 @@
         <activity
             android:name=".activity.view.MoveViewActivity"
             android:label="@string/title_activity_move_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.view.ScrollViewWithListView" />
+        <activity android:name=".activity.view.ScrollViewWithListViewActivity"></activity>
     </application>
 
 </manifest>
