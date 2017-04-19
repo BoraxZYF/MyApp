@@ -184,7 +184,11 @@
             android:label="@string/title_activity_move_view"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.view.ScrollViewWithListView" />
-        <activity android:name=".activity.view.ScrollViewWithListViewActivity"></activity>
+        <activity android:name=".activity.view.ScrollViewWithListViewActivity" />
+        <activity
+            android:name=".activity.pulltorefresh.PullToRefreshActivity"
+            android:label="@string/title_activity_pull_to_refresh"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -49,29 +49,43 @@ public class AesActivity extends BaseActivity {
     @OnClick(R.id.button)
     public void onClick() {
 
+        try {
+            Logger.d(AesUtil.encrypt("123456"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            Logger.d(AesUtil.desEncrypt("ggL8aGpJ1B8ZyFZnhfJ0Dg===="));
+        } catch (Exception e) {
+            e.printStackTrace();
+            Logger.d("des encrypt error");
+        }
+
         JsonParams params = new JsonParams();
-        params.put("age", "1");
-        params.put("username", "borax");
-        params.put("sex", "男");
+//        params.put("age", "1");
+//        params.put("username", "borax");
+//        params.put("sex", "男");
+
 
         Logger.d(params.toString());
 
-        SaintiClient.doPost("post", params, new SaintiCallback() {
-            @Override
-            public void success(String json) {
-
-                Logger.d(json);
-
-                User user = JSON.parseObject(json, User.class);
-                Logger.d(user.getUsername() + " " + user.getSex() + " " + user.getAge() + " " + user.getCity());
-
-            }
-
-            @Override
-            public void fail(String str) {
-
-            }
-        });
+//        SaintiClient.doPost("post", params, new SaintiCallback() {
+//            @Override
+//            public void success(String json) {
+//
+//                Logger.d(json);
+//
+//                User user = JSON.parseObject(json, User.class);
+//                Logger.d(user.getUsername() + " " + user.getSex() + " " + user.getAge() + " " + user.getCity());
+//
+//            }
+//
+//            @Override
+//            public void fail(String str) {
+//
+//            }
+//        });
 //
 //        SaintiClient.doGet("getlist", new SaintiCallback() {
 //            @Override

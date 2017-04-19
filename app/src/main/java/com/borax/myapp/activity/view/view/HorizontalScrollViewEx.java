@@ -109,6 +109,9 @@ public class HorizontalScrollViewEx extends ViewGroup {
         int x = (int) event.getX();
         int y = (int) event.getY();
 
+        int deltaX = 0;
+        int deltaY = 0;
+
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
                 intercepted = false;
@@ -119,8 +122,8 @@ public class HorizontalScrollViewEx extends ViewGroup {
                 break;
             }
             case MotionEvent.ACTION_MOVE: {
-                int deltaX = x - mLastXIntercept;
-                int deltaY = y - mLastYIntercept;
+                deltaX = x - mLastXIntercept;
+                deltaY = y - mLastYIntercept;
 
                 if (Math.abs(deltaX) > 10 && Math.abs(deltaX) > Math.abs(deltaY)) {
                     intercepted = true;
@@ -137,7 +140,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
                 break;
         }
 
-        Logger.d("intercepterd : " + intercepted);
+        Logger.d("intercepterd : " + intercepted + " " + deltaX + " " + deltaY);
 
         mLastX = x;
         mLastY = y;

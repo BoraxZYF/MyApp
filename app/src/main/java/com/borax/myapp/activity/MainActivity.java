@@ -27,6 +27,7 @@ import com.borax.myapp.activity.materialdesign.MaterialDesginMainActivity;
 import com.borax.myapp.activity.materialdesign4x.MaterialDesign4xMainActivity;
 import com.borax.myapp.activity.mvp.MVPActivity;
 import com.borax.myapp.activity.onstep.OneStepActivity;
+import com.borax.myapp.activity.pulltorefresh.PullToRefreshActivity;
 import com.borax.myapp.activity.recyclerviewpager.RecyclerViewPagerAcitivty;
 import com.borax.myapp.activity.shengchong.activity.ScActivity;
 import com.borax.myapp.activity.tablayout.TabLayoutActivity;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity
     private final String[] strs = new String[]{"ListView", "Fragment", "View", "TabLayout", "ViewPager", "CardView"
             , "MaterialDesign", "MaterialDesign4.x", "Rebel Test", "Encrypt Retrofit Test", "MVP Test", "Lottie"
             , "CaughtCrash", "OneStep", "Shengchong Test", "RecyclerViewPager", "Version Update", "Wave Test"
-            , "Template Activity"
+            , "Template Activity", "Pull To Refresh Activity"
     };
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -195,6 +196,13 @@ public class MainActivity extends AppCompatActivity
                                                         startActivity(intent);
                                                         break;
                                                     }
+
+                                                    case 19: {
+                                                        Intent intent = new Intent(MainActivity.this, PullToRefreshActivity.class);
+                                                        startActivity(intent);
+                                                        break;
+                                                    }
+
                                                 }
                                             }
                                         }
