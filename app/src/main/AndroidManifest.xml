@@ -188,7 +188,21 @@
         <activity
             android:name=".activity.pulltorefresh.PullToRefreshActivity"
             android:label="@string/title_activity_pull_to_refresh"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.SaintiActivity"
+            android:label="@string/title_activity_sainti"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.sainti.SplashActivity" />
+        <activity
+            android:name=".activity.sainti.adViewPager.AdViewPagerActivity"
+            android:label="@string/title_activity_ad_view_pager"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.photoView.PicsActivity"
+            android:label="@string/title_activity_pics"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".activity.sainti.photoView.PhotoViewActivity"></activity>
     </application>
 
 </manifest>

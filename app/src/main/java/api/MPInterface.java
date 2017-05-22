@@ -29,4 +29,7 @@ public interface MPInterface {
     @GET
     Call<ResponseBody> updateVersion(@Url String fileurl);
 
+    @GET("wx")
+    Call<BaseBean> getTest();
+
 }

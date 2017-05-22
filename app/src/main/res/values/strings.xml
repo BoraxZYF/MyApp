@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyApp</string>
+    <string name="app_name">demo</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -227,4 +227,7 @@
     <string name="title_activity_gesture_detector">GestureDetectorActivity</string>
     <string name="title_activity_move_view">MoveViewActivity</string>
     <string name="title_activity_pull_to_refresh">PullToRefreshActivity</string>
+    <string name="title_activity_sainti">SaintiActivity</string>
+    <string name="title_activity_ad_view_pager">AdViewPagerActivity</string>
+    <string name="title_activity_pics">PicsActivity</string>
 </resources>
