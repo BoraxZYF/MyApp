@@ -13,8 +13,8 @@ import sun.misc.BASE64Encoder;
 
 public class AesUtil {
 
-    private final static String KEY = "0123456789ABCDE0";
-    private final static String IV = "0123456789ABCDE0";
+    private final static String KEY = "1wbnZBxNFyW0o16X";
+    private final static String IV = "TdijJgSMaCn9HuWn";
 
     public static String encrypt(String str) throws Exception {
         try {

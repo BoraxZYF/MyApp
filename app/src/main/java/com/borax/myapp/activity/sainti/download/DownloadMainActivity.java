@@ -1,4 +1,4 @@
-package com.borax.myapp.activity.sainti;
+package com.borax.myapp.activity.sainti.download;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,15 +12,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.borax.myapp.R;
-import com.borax.myapp.activity.sainti.adViewPager.AdViewPagerActivity;
-import com.borax.myapp.activity.sainti.download.DownloadMainActivity;
-import com.borax.myapp.activity.sainti.photoView.PicsActivity;
-import com.borax.myapp.activity.sainti.uploadPics.UploadPicsActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SaintiActivity extends AppCompatActivity {
+public class DownloadMainActivity extends AppCompatActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -29,25 +25,15 @@ public class SaintiActivity extends AppCompatActivity {
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
-    String[] strs = new String[]{"启动页", "轮播图", "图片放大", "多图上传", "下载"};
-
+    String[] strs = new String[]{"Multiple Tasks", "Single Task"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sainti);
+        setContentView(R.layout.activity_download_main);
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        toolbar.setNavigationIcon(R.drawable.back);
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -73,40 +59,22 @@ public class SaintiActivity extends AppCompatActivity {
                 switch (i) {
 
                     case 0: {
-                        Intent intent = new Intent(SaintiActivity.this, SplashActivity.class);
+                        Intent intent = new Intent(DownloadMainActivity.this, MultipleTasksActivity.class);
                         startActivity(intent);
                         break;
                     }
 
                     case 1: {
-                        Intent intent = new Intent(SaintiActivity.this, AdViewPagerActivity.class);
+                        Intent intent = new Intent(DownloadMainActivity.this, SingleTaskActivity.class);
                         startActivity(intent);
                         break;
                     }
-
-                    case 2: {
-                        Intent intent = new Intent(SaintiActivity.this, PicsActivity.class);
-                        startActivity(intent);
-                        break;
-                    }
-
-                    case 3: {
-                        Intent intent = new Intent(SaintiActivity.this, UploadPicsActivity.class);
-                        startActivity(intent);
-                        break;
-                    }
-
-                    case 4: {
-                        Intent intent = new Intent(SaintiActivity.this, DownloadMainActivity.class);
-                        startActivity(intent);
-                        break;
-                    }
-
                 }
 
             }
         });
 
     }
+
 
 }

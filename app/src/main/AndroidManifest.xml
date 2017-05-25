@@ -2,14 +2,35 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.borax.myapp">
 
+    <!-- 【必须】 信鸽SDK所需权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 【常用】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 【可选】 信鸽SDK所需权限 -->
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+
+    <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 读取联系人权限，上传联系人需要用到此权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".activity.caughtcrash.CrashApplication"
@@ -201,8 +222,21 @@
         <activity
             android:name=".activity.sainti.photoView.PicsActivity"
             android:label="@string/title_activity_pics"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".activity.sainti.photoView.PhotoViewActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.sainti.photoView.PhotoViewActivity" />
+        <activity
+            android:name=".activity.sainti.uploadPics.UploadPicsActivity"
+            android:label="@string/title_activity_upload_pics"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.download.DownloadMainActivity"
+            android:label="@string/title_activity_download_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.download.MultipleTasksActivity"
+            android:label="@string/title_activity_multiple_tasks"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.sainti.download.SingleTaskActivity"></activity>
     </application>
 
 </manifest>
