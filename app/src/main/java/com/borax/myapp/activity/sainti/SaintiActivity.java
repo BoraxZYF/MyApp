@@ -10,9 +10,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.borax.myapp.R;
 import com.borax.myapp.activity.sainti.adViewPager.AdViewPagerActivity;
+import com.borax.myapp.activity.sainti.city.PickCityActivity;
 import com.borax.myapp.activity.sainti.download.DownloadMainActivity;
 import com.borax.myapp.activity.sainti.photoView.PicsActivity;
 import com.borax.myapp.activity.sainti.uploadPics.UploadPicsActivity;
@@ -29,7 +31,7 @@ public class SaintiActivity extends AppCompatActivity {
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
-    String[] strs = new String[]{"启动页", "轮播图", "图片放大", "多图上传", "下载"};
+    String[] strs = new String[]{"启动页", "轮播图", "图片放大", "多图上传", "下载", "图表", "城市选择"};
 
 
     @Override
@@ -98,6 +100,17 @@ public class SaintiActivity extends AppCompatActivity {
 
                     case 4: {
                         Intent intent = new Intent(SaintiActivity.this, DownloadMainActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 5: {
+                        Toast.makeText(SaintiActivity.this, "MPChart", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+
+                    case 6: {
+                        Intent intent = new Intent(SaintiActivity.this, PickCityActivity.class);
                         startActivity(intent);
                         break;
                     }

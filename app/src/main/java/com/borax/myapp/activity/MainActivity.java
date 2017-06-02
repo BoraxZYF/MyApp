@@ -37,6 +37,7 @@ import com.borax.myapp.activity.versionupdate.VersionUpdateActivity;
 import com.borax.myapp.activity.view.ViewActivity;
 import com.borax.myapp.activity.viewpager.ViewPagerActivity;
 import com.borax.myapp.activity.waveview.WaveActivity;
+import com.borax.myapp.activity.webbiew.WebViewActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity
     private final String[] strs = new String[]{"ListView", "Fragment", "View", "TabLayout", "ViewPager", "CardView"
             , "MaterialDesign", "MaterialDesign4.x", "Rebel Test", "Encrypt Retrofit Test", "MVP Test", "Lottie"
             , "CaughtCrash", "OneStep", "Shengchong Test", "RecyclerViewPager", "Version Update", "Wave Test"
-            , "Template Activity", "Pull To Refresh Activity", "Sainti"
+            , "Template Activity", "Pull To Refresh Activity", "Sainti", "WebView"
     };
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -206,6 +207,12 @@ public class MainActivity extends AppCompatActivity
 
                                                     case 20: {
                                                         Intent intent = new Intent(MainActivity.this, SaintiActivity.class);
+                                                        startActivity(intent);
+                                                        break;
+                                                    }
+
+                                                    case 21: {
+                                                        Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
                                                         startActivity(intent);
                                                         break;
                                                     }

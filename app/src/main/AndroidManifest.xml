@@ -236,7 +236,15 @@
             android:name=".activity.sainti.download.MultipleTasksActivity"
             android:label="@string/title_activity_multiple_tasks"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.sainti.download.SingleTaskActivity"></activity>
+        <activity android:name=".activity.sainti.download.SingleTaskActivity" />
+        <activity
+            android:name=".activity.sainti.city.PickCityActivity"
+            android:label="@string/title_activity_pick_city"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.webbiew.WebViewActivity"
+            android:label="@string/title_activity_web_view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

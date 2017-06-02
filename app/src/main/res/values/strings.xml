@@ -283,5 +283,7 @@
 
     <!-- multitask test -->
     <string name="multitask_test_title">Multiple tasks test</string>
+    <string name="title_activity_pick_city">PickCityActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
 
 </resources>
