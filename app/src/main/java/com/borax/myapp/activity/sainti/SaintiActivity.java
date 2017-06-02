@@ -17,6 +17,8 @@ import com.borax.myapp.activity.sainti.adViewPager.AdViewPagerActivity;
 import com.borax.myapp.activity.sainti.city.PickCityActivity;
 import com.borax.myapp.activity.sainti.download.DownloadMainActivity;
 import com.borax.myapp.activity.sainti.photoView.PicsActivity;
+import com.borax.myapp.activity.sainti.selectMultiPhotos.SelectMultiPhotoActivity;
+import com.borax.myapp.activity.sainti.selectSinglePhoto.SelectSingleActivity;
 import com.borax.myapp.activity.sainti.uploadPics.UploadPicsActivity;
 
 import butterknife.BindView;
@@ -31,7 +33,7 @@ public class SaintiActivity extends AppCompatActivity {
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
-    String[] strs = new String[]{"启动页", "轮播图", "图片放大", "多图上传", "下载", "图表", "城市选择"};
+    String[] strs = new String[]{"启动页", "轮播图", "图片放大", "多图上传", "下载", "图表", "城市选择", "选择多图", "选择单图"};
 
 
     @Override
@@ -111,6 +113,18 @@ public class SaintiActivity extends AppCompatActivity {
 
                     case 6: {
                         Intent intent = new Intent(SaintiActivity.this, PickCityActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 7: {
+                        Intent intent = new Intent(SaintiActivity.this, SelectMultiPhotoActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 8: {
+                        Intent intent = new Intent(SaintiActivity.this, SelectSingleActivity.class);
                         startActivity(intent);
                         break;
                     }

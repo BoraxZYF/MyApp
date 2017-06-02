@@ -31,6 +31,7 @@
     <!-- 读取联系人权限，上传联系人需要用到此权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:name=".activity.caughtcrash.CrashApplication"
@@ -244,6 +245,14 @@
         <activity
             android:name=".activity.webbiew.WebViewActivity"
             android:label="@string/title_activity_web_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.selectSinglePhoto.SelectSingleActivity"
+            android:label="@string/title_activity_select_single"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.selectMultiPhotos.SelectMultiPhotoActivity"
+            android:label="@string/title_activity_select_multi_photo"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

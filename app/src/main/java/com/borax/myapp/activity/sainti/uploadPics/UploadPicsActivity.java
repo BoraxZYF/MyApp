@@ -94,7 +94,7 @@ public class UploadPicsActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.select_pic: {
 
-                config = new ImgSelConfig.Builder(loader)
+                config = new ImgSelConfig.Builder(UploadPicsActivity.this, loader)
                         // 是否多选
                         .multiSelect(true)
                         // “确定”按钮背景色
