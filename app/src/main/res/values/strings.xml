@@ -287,5 +287,6 @@
     <string name="title_activity_web_view">WebViewActivity</string>
     <string name="title_activity_select_single">SelectSingleActivity</string>
     <string name="title_activity_select_multi_photo">SelectMultiPhotoActivity</string>
+    <string name="title_activity_video">VideoActivity</string>
 
 </resources>
