@@ -259,6 +259,10 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/title_activity_video"
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.radio.UploadRadioActivity"
+            android:label="@string/title_activity_upload_radio"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -3,6 +3,8 @@ package com.borax.myapp.activity.caughtcrash;
 import android.app.Application;
 import android.content.Context;
 
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
 import com.liulishuo.filedownloader.FileDownloader;
 import com.liulishuo.filedownloader.connection.FileDownloadUrlConnection;
 import com.liulishuo.filedownloader.services.DownloadMgrInitialParams;
@@ -33,6 +35,10 @@ public class CrashApplication extends Application {
                         .readTimeout(15_000) // set read timeout.
                         .proxy(Proxy.NO_PROXY) // set proxy
                 )));
+
+        Context context = getApplicationContext();
+        SpeechUtility.createUtility(context, SpeechConstant.APPID + "=58bfb256 ");
+
 
     }
 }
