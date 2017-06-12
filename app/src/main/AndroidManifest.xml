@@ -263,7 +263,12 @@
         <activity
             android:name=".activity.sainti.radio.UploadRadioActivity"
             android:label="@string/title_activity_upload_radio"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.loading.LoadingActivity"
+            android:label="@string/title_activity_loading"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.sainti.guide.GuideActivity"></activity>
     </application>
 
 </manifest>

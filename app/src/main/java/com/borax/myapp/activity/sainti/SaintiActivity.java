@@ -16,6 +16,8 @@ import com.borax.myapp.R;
 import com.borax.myapp.activity.sainti.adViewPager.AdViewPagerActivity;
 import com.borax.myapp.activity.sainti.city.PickCityActivity;
 import com.borax.myapp.activity.sainti.download.DownloadMainActivity;
+import com.borax.myapp.activity.sainti.guide.GuideActivity;
+import com.borax.myapp.activity.sainti.loading.LoadingActivity;
 import com.borax.myapp.activity.sainti.photoView.PicsActivity;
 import com.borax.myapp.activity.sainti.radio.UploadRadioActivity;
 import com.borax.myapp.activity.sainti.selectMultiPhotos.SelectMultiPhotoActivity;
@@ -35,8 +37,10 @@ public class SaintiActivity extends AppCompatActivity {
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
-    String[] strs = new String[]{"启动页", "轮播图", "图片放大", "多图上传", "下载", "图表", "城市选择", "选择多图", "选择单图", "视频播放", "语音上传"};
-
+    String[] strs = new String[]{"启动页", "轮播图", "图片放大", "多图上传", "下载", "图表",
+            "城市选择", "选择多图", "选择单图", "视频播放", "语音上传", "Loading", "引导页", "分享",
+            "支付", "瀑布流", "九宫格图片上传", "底部菜单", "分组列表", "下拉刷新自定义动画", "手势解锁",
+            "评星", "扫描二维码", "flowlayout"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,6 +143,18 @@ public class SaintiActivity extends AppCompatActivity {
 
                     case 10: {
                         Intent intent = new Intent(SaintiActivity.this, UploadRadioActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 11: {
+                        Intent intent = new Intent(SaintiActivity.this, LoadingActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 12: {
+                        Intent intent = new Intent(SaintiActivity.this, GuideActivity.class);
                         startActivity(intent);
                         break;
                     }
