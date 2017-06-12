@@ -24,6 +24,7 @@ import com.borax.myapp.activity.sainti.selectMultiPhotos.SelectMultiPhotoActivit
 import com.borax.myapp.activity.sainti.selectSinglePhoto.SelectSingleActivity;
 import com.borax.myapp.activity.sainti.uploadPics.UploadPicsActivity;
 import com.borax.myapp.activity.sainti.video.VideoActivity;
+import com.borax.myapp.activity.sainti.waterfall.WaterfallActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -158,6 +159,19 @@ public class SaintiActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     }
+
+                    case 13: {
+                        Intent intent = new Intent(SaintiActivity.this, ShareActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 15: {
+                        Intent intent = new Intent(SaintiActivity.this, WaterfallActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
 
                 }
 

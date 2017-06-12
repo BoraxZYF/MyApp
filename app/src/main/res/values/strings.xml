@@ -290,5 +290,7 @@
     <string name="title_activity_video">VideoActivity</string>
     <string name="title_activity_upload_radio">UploadRadioActivity</string>
     <string name="title_activity_loading">LoadingActivity</string>
+    <string name="title_activity_share">ShareActivity</string>
+    <string name="title_activity_waterfall">WaterfallActivity</string>
 
 </resources>

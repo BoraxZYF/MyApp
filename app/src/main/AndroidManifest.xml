@@ -268,7 +268,15 @@
             android:name=".activity.sainti.loading.LoadingActivity"
             android:label="@string/title_activity_loading"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.sainti.guide.GuideActivity"></activity>
+        <activity android:name=".activity.sainti.guide.GuideActivity" />
+        <activity
+            android:name=".activity.sainti.ShareActivity"
+            android:label="@string/title_activity_share"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.waterfall.WaterfallActivity"
+            android:label="@string/title_activity_waterfall"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
