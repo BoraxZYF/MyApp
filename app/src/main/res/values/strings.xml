@@ -292,5 +292,6 @@
     <string name="title_activity_loading">LoadingActivity</string>
     <string name="title_activity_share">ShareActivity</string>
     <string name="title_activity_waterfall">WaterfallActivity</string>
+    <string name="title_activity_nine_pic_upload">NinePicUploadActivity</string>
 
 </resources>

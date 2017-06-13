@@ -18,6 +18,7 @@ import com.borax.myapp.activity.sainti.city.PickCityActivity;
 import com.borax.myapp.activity.sainti.download.DownloadMainActivity;
 import com.borax.myapp.activity.sainti.guide.GuideActivity;
 import com.borax.myapp.activity.sainti.loading.LoadingActivity;
+import com.borax.myapp.activity.sainti.ninepicupload.NinePicUploadActivity;
 import com.borax.myapp.activity.sainti.photoView.PicsActivity;
 import com.borax.myapp.activity.sainti.radio.UploadRadioActivity;
 import com.borax.myapp.activity.sainti.selectMultiPhotos.SelectMultiPhotoActivity;
@@ -168,6 +169,12 @@ public class SaintiActivity extends AppCompatActivity {
 
                     case 15: {
                         Intent intent = new Intent(SaintiActivity.this, WaterfallActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 16: {
+                        Intent intent = new Intent(SaintiActivity.this, NinePicUploadActivity.class);
                         startActivity(intent);
                         break;
                     }
