@@ -23,6 +23,8 @@ import com.borax.myapp.activity.sainti.photoView.PicsActivity;
 import com.borax.myapp.activity.sainti.radio.UploadRadioActivity;
 import com.borax.myapp.activity.sainti.selectMultiPhotos.SelectMultiPhotoActivity;
 import com.borax.myapp.activity.sainti.selectSinglePhoto.SelectSingleActivity;
+import com.borax.myapp.activity.sainti.spinner.BottomMenuActivity;
+import com.borax.myapp.activity.sainti.spinner.TopMenuActivity;
 import com.borax.myapp.activity.sainti.uploadPics.UploadPicsActivity;
 import com.borax.myapp.activity.sainti.video.VideoActivity;
 import com.borax.myapp.activity.sainti.waterfall.WaterfallActivity;
@@ -41,7 +43,7 @@ public class SaintiActivity extends AppCompatActivity {
 
     String[] strs = new String[]{"启动页", "轮播图", "图片放大", "多图上传", "下载", "图表",
             "城市选择", "选择多图", "选择单图", "视频播放", "语音上传", "Loading", "引导页", "分享",
-            "支付", "瀑布流", "九宫格图片上传", "底部菜单", "分组列表", "下拉刷新自定义动画", "手势解锁",
+            "支付", "瀑布流", "九宫格图片上传", "顶部菜单", "底部菜单", "分组列表", "下拉刷新自定义动画", "手势解锁",
             "评星", "扫描二维码", "flowlayout"};
 
     @Override
@@ -179,6 +181,17 @@ public class SaintiActivity extends AppCompatActivity {
                         break;
                     }
 
+                    case 17: {
+                        Intent intent = new Intent(SaintiActivity.this, TopMenuActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 18: {
+                        Intent intent = new Intent(SaintiActivity.this, BottomMenuActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
 
                 }
 

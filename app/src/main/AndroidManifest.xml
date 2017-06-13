@@ -280,6 +280,14 @@
         <activity
             android:name=".activity.sainti.ninepicupload.NinePicUploadActivity"
             android:label="@string/title_activity_nine_pic_upload"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.spinner.TopMenuActivity"
+            android:label="@string/title_activity_top_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.spinner.BottomMenuActivity"
+            android:label="@string/title_activity_bottom_menu"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
