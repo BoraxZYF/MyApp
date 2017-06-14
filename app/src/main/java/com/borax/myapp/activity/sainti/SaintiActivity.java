@@ -18,6 +18,7 @@ import com.borax.myapp.activity.sainti.adViewPager.AdViewPagerActivity;
 import com.borax.myapp.activity.sainti.city.PickCityActivity;
 import com.borax.myapp.activity.sainti.download.DownloadMainActivity;
 import com.borax.myapp.activity.sainti.expandlistview.ExpandListViewActivity;
+import com.borax.myapp.activity.sainti.gesture.CreateGestureActivity;
 import com.borax.myapp.activity.sainti.guide.GuideActivity;
 import com.borax.myapp.activity.sainti.loading.LoadingActivity;
 import com.borax.myapp.activity.sainti.ninepicupload.NinePicUploadActivity;
@@ -203,6 +204,12 @@ public class SaintiActivity extends AppCompatActivity {
 
                     case 20: {
                         Intent intent = new Intent(SaintiActivity.this, PullToRefreshActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 21: {
+                        Intent intent = new Intent(SaintiActivity.this, CreateGestureActivity.class);
                         startActivity(intent);
                         break;
                     }

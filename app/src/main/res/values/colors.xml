@@ -5,4 +5,17 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="black_overlay">#66000000</color>
+
+
+    <attr name="color_lock_pattern_view_regular" format="reference" />
+    <attr name="color_lock_pattern_view_success" format="reference" />
+    <attr name="color_lock_pattern_view_error" format="reference" />
+
+    <color name="lock_pattern_view_regular_light">#d1c0a5</color>
+    <color name="lock_pattern_view_success_light">#F47542</color>
+    <color name="lock_pattern_view_error_light">#e51c23</color>
+    <color name="lock_pattern_view_regular_dark">#d1c0a5</color>
+    <color name="lock_pattern_view_success_dark">#F47542</color>
+    <color name="lock_pattern_view_error_dark">#e51c23</color>
+
 </resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/title"-->
+    <!--style="@style/titleBar" >-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/back"-->
+    <!--style="@style/titleBack" />-->
+
+    <!--<TextView-->
+    <!--style="@style/titleText"-->
+    <!--android:text="手势密码" />-->
+    <!--</RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="请输入手势密码"
+        android:textColor="#393939"
+        android:textSize="15sp" />
+
+    <com.borax.myapp.activity.sainti.gesture.widget.LockPatternViewEx
+        android:id="@+id/lockview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF" />
+
+</RelativeLayout>
