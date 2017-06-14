@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.borax.myapp.R;
+import com.borax.myapp.activity.pulltorefresh.PullToRefreshActivity;
 import com.borax.myapp.activity.sainti.adViewPager.AdViewPagerActivity;
 import com.borax.myapp.activity.sainti.city.PickCityActivity;
 import com.borax.myapp.activity.sainti.download.DownloadMainActivity;
@@ -196,6 +197,12 @@ public class SaintiActivity extends AppCompatActivity {
 
                     case 19: {
                         Intent intent = new Intent(SaintiActivity.this, ExpandListViewActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 20: {
+                        Intent intent = new Intent(SaintiActivity.this, PullToRefreshActivity.class);
                         startActivity(intent);
                         break;
                     }

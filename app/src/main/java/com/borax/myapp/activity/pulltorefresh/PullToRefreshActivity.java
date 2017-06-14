@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.borax.myapp.R;
+import com.borax.myapp.activity.BaseActivity;
 
 import java.util.ArrayList;
 
@@ -17,7 +18,7 @@ import butterknife.ButterKnife;
 import in.srain.cube.views.ptr.PtrDefaultHandler2;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 
-public class PullToRefreshActivity extends AppCompatActivity {
+public class PullToRefreshActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -79,6 +80,7 @@ public class PullToRefreshActivity extends AppCompatActivity {
             }
         });
 
+        setRefreshHeader(ptrframe);
 
     }
 
