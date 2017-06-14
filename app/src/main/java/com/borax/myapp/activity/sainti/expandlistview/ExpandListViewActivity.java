@@ -1,4 +1,4 @@
-package com.borax.myapp.activity.webbiew;
+package com.borax.myapp.activity.sainti.expandlistview;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -6,33 +6,33 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.ExpandableListView;
 
 import com.borax.myapp.R;
-import com.borax.myapp.activity.BaseActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class WebViewActivity extends BaseActivity {
+public class ExpandListViewActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.webview)
-    WebView webview;
-    @BindView(R.id.fab)
-    FloatingActionButton fab;
+    @BindView(R.id.listview)
+    ExpandableListView listview;
+
+    List<String> groupList;
+    List<List<String>> childList;
+
+    ExpandListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_web_view);
+        setContentView(R.layout.activity_expand_list_view);
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,29 +56,41 @@ public class WebViewActivity extends BaseActivity {
 
     private void initView() {
 
-        // 开启 localStorage
-        webview.getSettings().setDomStorageEnabled(true);
-        // 设置支持javascript
-        webview.getSettings().setJavaScriptEnabled(true);
-        // 启动缓存
-        webview.getSettings().setAppCacheEnabled(true);
-        // 设置缓存模式
-        webview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
-        //使用自定义的WebViewClient
-        webview.setWebViewClient(new WebViewClient() {
-            //覆盖shouldOverrideUrlLoading 方法
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-        });
+        groupList = new ArrayList<String>();
+        childList = new ArrayList<List<String>>();
 
+        initGroup();
+        initChild();
 
-//        webview.loadUrl("http://59.110.243.46/index.php/m/main");
-        webview.loadUrl("http://www.baidu.com");
+        adapter = new ExpandListAdapter(this, groupList, childList);
+
+        listview.setAdapter(adapter);
 
 
     }
+
+    private void initGroup() {
+
+        for (int i = 0; i < 10; i++) {
+            groupList.add("group" + i);
+        }
+
+    }
+
+    private void initChild() {
+
+        for (int i = 0; i < groupList.size(); i++) {
+
+            List<String> list = new ArrayList<String>();
+
+            for (int j = 0; j < 5; j++) {
+                list.add("group " + i + " child " + j);
+            }
+
+            childList.add(list);
+
+        }
+    }
+
 
 }

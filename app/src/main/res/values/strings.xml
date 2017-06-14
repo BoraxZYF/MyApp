@@ -295,5 +295,6 @@
     <string name="title_activity_nine_pic_upload">NinePicUploadActivity</string>
     <string name="title_activity_top_menu">TopMenuActivity</string>
     <string name="title_activity_bottom_menu">BottomMenuActivity</string>
+    <string name="title_activity_expand_list_view">ExpandListViewActivity</string>
 
 </resources>

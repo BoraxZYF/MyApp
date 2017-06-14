@@ -288,6 +288,10 @@
         <activity
             android:name=".activity.sainti.spinner.BottomMenuActivity"
             android:label="@string/title_activity_bottom_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.expandlistview.ExpandListViewActivity"
+            android:label="@string/title_activity_expand_list_view"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
