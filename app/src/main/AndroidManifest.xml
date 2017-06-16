@@ -32,6 +32,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <application
         android:name=".activity.caughtcrash.CrashApplication"
@@ -292,10 +293,22 @@
         <activity
             android:name=".activity.sainti.expandlistview.ExpandListViewActivity"
             android:label="@string/title_activity_expand_list_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.sainti.gesture.CreateGestureActivity"
             android:theme="@style/AppTheme.Light" />
+        <activity
+            android:name=".activity.sainti.ratingbar.RatingBarActivity"
+            android:label="@string/title_activity_rating_bar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.scan.ScanActivity"
+            android:label="@string/title_activity_scan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.sainti.flowlayout.FlowLayoutActivity"
+            android:label="@string/title_activity_flow_layout"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

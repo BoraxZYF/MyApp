@@ -29,8 +29,6 @@ public class LoadingActivity extends BaseActivity {
         });
 
         showLoading();
-        showLoading();
-        showLoading();
 
     }
 

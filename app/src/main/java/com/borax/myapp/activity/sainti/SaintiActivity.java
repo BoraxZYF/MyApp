@@ -18,12 +18,15 @@ import com.borax.myapp.activity.sainti.adViewPager.AdViewPagerActivity;
 import com.borax.myapp.activity.sainti.city.PickCityActivity;
 import com.borax.myapp.activity.sainti.download.DownloadMainActivity;
 import com.borax.myapp.activity.sainti.expandlistview.ExpandListViewActivity;
+import com.borax.myapp.activity.sainti.flowlayout.FlowLayoutActivity;
 import com.borax.myapp.activity.sainti.gesture.CreateGestureActivity;
 import com.borax.myapp.activity.sainti.guide.GuideActivity;
 import com.borax.myapp.activity.sainti.loading.LoadingActivity;
 import com.borax.myapp.activity.sainti.ninepicupload.NinePicUploadActivity;
 import com.borax.myapp.activity.sainti.photoView.PicsActivity;
 import com.borax.myapp.activity.sainti.radio.UploadRadioActivity;
+import com.borax.myapp.activity.sainti.ratingbar.RatingBarActivity;
+import com.borax.myapp.activity.sainti.scan.ScanActivity;
 import com.borax.myapp.activity.sainti.selectMultiPhotos.SelectMultiPhotoActivity;
 import com.borax.myapp.activity.sainti.selectSinglePhoto.SelectSingleActivity;
 import com.borax.myapp.activity.sainti.spinner.BottomMenuActivity;
@@ -210,6 +213,24 @@ public class SaintiActivity extends AppCompatActivity {
 
                     case 21: {
                         Intent intent = new Intent(SaintiActivity.this, CreateGestureActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 22: {
+                        Intent intent = new Intent(SaintiActivity.this, RatingBarActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 23: {
+                        Intent intent = new Intent(SaintiActivity.this, ScanActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 24: {
+                        Intent intent = new Intent(SaintiActivity.this, FlowLayoutActivity.class);
                         startActivity(intent);
                         break;
                     }

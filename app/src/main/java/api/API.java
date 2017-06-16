@@ -15,6 +15,8 @@ public class API {
     public static final String BASE_URL = "http://app.shengchong.cn/appapi/";
     public static final String CRASH_URL = "http://yufeiyjm.sinaapp.com/index.php/";
 
+    public static final String PAY_URL = "http://www.yueban.cn/app_api_v2/index.php/";
+
     public static Retrofit RETROFIT = new Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
