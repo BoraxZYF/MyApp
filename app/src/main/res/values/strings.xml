@@ -308,5 +308,6 @@
     <string name="title_activity_rating_bar">RatingBar</string>
     <string name="title_activity_scan">ScanActivity</string>
     <string name="title_activity_flow_layout">FlowLayoutActivity</string>
+    <string name="title_activity_long_service">LongServiceActivity</string>
 
 </resources>

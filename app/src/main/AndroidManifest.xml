@@ -308,7 +308,14 @@
         <activity
             android:name=".activity.sainti.flowlayout.FlowLayoutActivity"
             android:label="@string/title_activity_flow_layout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.longtimeservice.LongServiceActivity"
+            android:label="@string/title_activity_long_service"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <service android:name=".activity.longtimeservice.LongRunService"></service>
+        <receiver android:name=".activity.longtimeservice.AlarmReceiver"></receiver>
     </application>
 
 </manifest>

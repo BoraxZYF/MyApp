@@ -22,6 +22,7 @@ import com.borax.myapp.activity.caughtcrash.CrashActivity;
 import com.borax.myapp.activity.encrypt.EncryptActivity;
 import com.borax.myapp.activity.fragment.FragmentListActivity;
 import com.borax.myapp.activity.listview.ListViewActivity;
+import com.borax.myapp.activity.longtimeservice.LongServiceActivity;
 import com.borax.myapp.activity.lottie.LottieActivity;
 import com.borax.myapp.activity.materialdesign.MaterialDesginMainActivity;
 import com.borax.myapp.activity.materialdesign4x.MaterialDesign4xMainActivity;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity
     private final String[] strs = new String[]{"ListView", "Fragment", "View", "TabLayout", "ViewPager", "CardView"
             , "MaterialDesign", "MaterialDesign4.x", "Rebel Test", "Encrypt Retrofit Test", "MVP Test", "Lottie"
             , "CaughtCrash", "OneStep", "Shengchong Test", "RecyclerViewPager", "Version Update", "Wave Test"
-            , "Template Activity", "Pull To Refresh Activity", "Sainti", "WebView"
+            , "Template Activity", "Pull To Refresh Activity", "Sainti", "WebView", "LongTimeService"
     };
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -213,6 +214,12 @@ public class MainActivity extends AppCompatActivity
 
                                                     case 21: {
                                                         Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
+                                                        startActivity(intent);
+                                                        break;
+                                                    }
+
+                                                    case 22: {
+                                                        Intent intent = new Intent(MainActivity.this, LongServiceActivity.class);
                                                         startActivity(intent);
                                                         break;
                                                     }

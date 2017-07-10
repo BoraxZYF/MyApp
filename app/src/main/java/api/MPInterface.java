@@ -4,6 +4,7 @@ import com.borax.myapp.activity.encrypt.BaseBean;
 
 import java.util.Map;
 
+import entity.LongServiceTestBean;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -40,5 +41,9 @@ public interface MPInterface {
     @Multipart
     @POST("UploadFile")
     Call<BaseBean> postUploadPic(@PartMap Map<String, RequestBody> params);
+
+    @FormUrlEncoded
+    @POST("Apidata")
+    Call<LongServiceTestBean> postLongService(@Field("data") String data);
 
 }

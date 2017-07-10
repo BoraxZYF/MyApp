@@ -3,6 +3,7 @@ package com.borax.myapp.activity.caughtcrash;
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
+import android.os.PowerManager;
 
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechUtility;
