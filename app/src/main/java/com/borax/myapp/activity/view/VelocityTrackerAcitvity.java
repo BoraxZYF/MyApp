@@ -2,10 +2,9 @@ package com.borax.myapp.activity.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
-import android.view.View;
+import android.widget.TextView;
 
 import com.borax.myapp.R;
 import com.orhanobut.logger.Logger;
@@ -14,6 +13,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class VelocityTrackerAcitvity extends AppCompatActivity {
+    @BindView(R.id.text)
+    TextView text;
 //
 //    @BindView(R.id.toolbar)
 //    Toolbar toolbar;
@@ -46,7 +47,7 @@ public class VelocityTrackerAcitvity extends AppCompatActivity {
         float xVelocity = velocityTracker.getXVelocity();
         float yVelocity = velocityTracker.getYVelocity();
 
-        Logger.d("xVelocity: " + xVelocity + "  yVelocity： " + yVelocity);
+        text.setText("xVelocity: " + xVelocity + "  yVelocity： " + yVelocity);
 
         return super.onTouchEvent(event);
     }

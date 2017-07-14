@@ -8,5 +8,10 @@
     tools:context="com.borax.myapp.activity.view.GestureDetectorActivity"
     tools:showIn="@layout/activity_gesture_detector">
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" />
 
 </android.support.constraint.ConstraintLayout>

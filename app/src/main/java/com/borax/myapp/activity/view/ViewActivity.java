@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.ViewStubCompat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -19,7 +20,9 @@ public class ViewActivity extends AppCompatActivity {
 
     @BindView(R.id.listview)
     ListView listview;
-    private String[] strs = new String[]{"Simple Layout", "Simple View", "Velocity Tracker", "Follow Finger View", "ScrollView With ListView"};
+    private String[] strs = new String[]{"Simple Layout", "Simple View", "Velocity Tracker",
+            "Follow Finger View", "ScrollView With ListView", "GestureDetector",
+            "ScrollTo/By", "SmoothScrollTo"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,24 @@ public class ViewActivity extends AppCompatActivity {
 
                     case 4: {
                         Intent intent = new Intent(ViewActivity.this, ScrollViewWithListViewActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 5: {
+                        Intent intent = new Intent(ViewActivity.this, GestureDetectorActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 6: {
+                        Intent intent = new Intent(ViewActivity.this, ScrollToByActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 7: {
+                        Intent intent = new Intent(ViewActivity.this, SmoothScrollActivity.class);
                         startActivity(intent);
                         break;
                     }

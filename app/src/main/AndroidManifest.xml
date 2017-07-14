@@ -312,10 +312,17 @@
         <activity
             android:name=".activity.longtimeservice.LongServiceActivity"
             android:label="@string/title_activity_long_service"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
-        <service android:name=".activity.longtimeservice.LongRunService"></service>
-        <receiver android:name=".activity.longtimeservice.AlarmReceiver"></receiver>
+        <service android:name=".activity.longtimeservice.LongRunService" />
+
+        <receiver android:name=".activity.longtimeservice.AlarmReceiver" />
+
+        <activity
+            android:name=".activity.view.SmoothScrollActivity"
+            android:label="@string/title_activity_scroller"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.view.ScrollToByActivity"></activity>
     </application>
 
 </manifest>
