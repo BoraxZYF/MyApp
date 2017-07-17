@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.borax.myapp.activity.hencoder.hencoder2.Hencoder2MainActivity"
+    tools:showIn="@layout/activity_hencoder2_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/horizontal_divider"
+            android:dividerPadding="10dp"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:showDividers="middle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shader"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LinearGradientView"
+                android:textSize="15sp" />
+
+            <com.borax.myapp.activity.hencoder.hencoder2.LinearGradientView
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadialGradientView"
+                android:textSize="15sp" />
+
+            <com.borax.myapp.activity.hencoder.hencoder2.RadialGradientView
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

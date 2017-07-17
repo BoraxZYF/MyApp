@@ -310,5 +310,8 @@
     <string name="title_activity_flow_layout">FlowLayoutActivity</string>
     <string name="title_activity_long_service">LongServiceActivity</string>
     <string name="title_activity_scroller">ScrollerActivity</string>
+    <string name="title_activity_view_dispatch">ViewDispatchActivity</string>
+    <string name="title_activity_hencoder_main">HencoderMainActivity</string>
+    <string name="title_activity_hencoder2_main">Hencoder2MainActivity</string>
 
 </resources>

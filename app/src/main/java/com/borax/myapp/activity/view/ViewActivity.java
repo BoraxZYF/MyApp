@@ -22,7 +22,7 @@ public class ViewActivity extends AppCompatActivity {
     ListView listview;
     private String[] strs = new String[]{"Simple Layout", "Simple View", "Velocity Tracker",
             "Follow Finger View", "ScrollView With ListView", "GestureDetector",
-            "ScrollTo/By", "SmoothScrollTo"};
+            "ScrollTo/By", "SmoothScrollTo", "ViewDispatch"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +98,12 @@ public class ViewActivity extends AppCompatActivity {
 
                     case 7: {
                         Intent intent = new Intent(ViewActivity.this, SmoothScrollActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+
+                    case 8: {
+                        Intent intent = new Intent(ViewActivity.this, ViewDispatchActivity.class);
                         startActivity(intent);
                         break;
                     }

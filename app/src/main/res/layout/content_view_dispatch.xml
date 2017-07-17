@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.borax.myapp.activity.view.ViewDispatchActivity"
+    tools:showIn="@layout/activity_view_dispatch">
+
+    <com.borax.myapp.activity.view.view.DispatchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <com.borax.myapp.activity.view.view.DispatchChildButton
+            android:id="@+id/button"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="button" />
+
+    </com.borax.myapp.activity.view.view.DispatchView>
+
+
+</LinearLayout>

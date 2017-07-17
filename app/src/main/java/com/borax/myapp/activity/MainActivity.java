@@ -21,6 +21,7 @@ import com.borax.myapp.activity.cardview.CardViewMainActivity;
 import com.borax.myapp.activity.caughtcrash.CrashActivity;
 import com.borax.myapp.activity.encrypt.EncryptActivity;
 import com.borax.myapp.activity.fragment.FragmentListActivity;
+import com.borax.myapp.activity.hencoder.HencoderMainActivity;
 import com.borax.myapp.activity.listview.ListViewActivity;
 import com.borax.myapp.activity.longtimeservice.LongServiceActivity;
 import com.borax.myapp.activity.lottie.LottieActivity;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity
             , "MaterialDesign", "MaterialDesign4.x", "Rebel Test", "Encrypt Retrofit Test", "MVP Test", "Lottie"
             , "CaughtCrash", "OneStep", "Shengchong Test", "RecyclerViewPager", "Version Update", "Wave Test"
             , "Template Activity", "Pull To Refresh Activity", "Sainti", "WebView", "LongTimeService"
+            , "HenCoder"
     };
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -220,6 +222,12 @@ public class MainActivity extends AppCompatActivity
 
                                                     case 22: {
                                                         Intent intent = new Intent(MainActivity.this, LongServiceActivity.class);
+                                                        startActivity(intent);
+                                                        break;
+                                                    }
+
+                                                    case 23: {
+                                                        Intent intent = new Intent(MainActivity.this, HencoderMainActivity.class);
                                                         startActivity(intent);
                                                         break;
                                                     }
