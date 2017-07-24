@@ -9,4 +9,13 @@
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="BoraxRoundButton">
+
+        <attr name="bg_color" format="color" />
+        <attr name="cornersRadius" format="dimension" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderColor" format="color" />
+
+    </declare-styleable>
+
 </resources>

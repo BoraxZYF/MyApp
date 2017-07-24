@@ -46,9 +46,7 @@
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".activity.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
@@ -330,6 +328,12 @@
         <activity
             android:name=".activity.hencoder.hencoder2.Hencoder2MainActivity"
             android:label="@string/title_activity_hencoder2_main"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".activity.customview.CustomViewActivity"
+            android:label="@string/title_activity_custome_view"
             android:theme="@style/AppTheme.NoActionBar">
 
             <intent-filter>

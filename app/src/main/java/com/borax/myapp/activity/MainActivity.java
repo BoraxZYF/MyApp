@@ -19,6 +19,7 @@ import android.widget.ListView;
 import com.borax.myapp.R;
 import com.borax.myapp.activity.cardview.CardViewMainActivity;
 import com.borax.myapp.activity.caughtcrash.CrashActivity;
+import com.borax.myapp.activity.customview.CustomViewActivity;
 import com.borax.myapp.activity.encrypt.EncryptActivity;
 import com.borax.myapp.activity.fragment.FragmentListActivity;
 import com.borax.myapp.activity.hencoder.HencoderMainActivity;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity
             , "MaterialDesign", "MaterialDesign4.x", "Rebel Test", "Encrypt Retrofit Test", "MVP Test", "Lottie"
             , "CaughtCrash", "OneStep", "Shengchong Test", "RecyclerViewPager", "Version Update", "Wave Test"
             , "Template Activity", "Pull To Refresh Activity", "Sainti", "WebView", "LongTimeService"
-            , "HenCoder"
+            , "HenCoder", "CustomViewActivity"
     };
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -228,6 +229,12 @@ public class MainActivity extends AppCompatActivity
 
                                                     case 23: {
                                                         Intent intent = new Intent(MainActivity.this, HencoderMainActivity.class);
+                                                        startActivity(intent);
+                                                        break;
+                                                    }
+
+                                                    case 24: {
+                                                        Intent intent = new Intent(MainActivity.this, CustomViewActivity.class);
                                                         startActivity(intent);
                                                         break;
                                                     }
