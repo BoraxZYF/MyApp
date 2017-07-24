@@ -77,12 +77,14 @@ public class BoraxRoundButton extends android.support.v7.widget.AppCompatButton 
     protected void onDraw(Canvas canvas) {
 
         Paint bgPaint = new Paint();
+        bgPaint.setAntiAlias(true);
         bgPaint.setStyle(Paint.Style.FILL);
         bgPaint.setColor(bg_color);
         RectF bgRectF = new RectF(borderWidth / 2, borderWidth / 2, getWidth() - borderWidth / 2, getHeight() - borderWidth / 2);
         canvas.drawRoundRect(bgRectF, cornerRadius, cornerRadius, bgPaint);
 
         Paint borderPaint = new Paint();
+        borderPaint.setAntiAlias(true);
         borderPaint.setStyle(Paint.Style.STROKE);
         borderPaint.setColor(borderColor);
         borderPaint.setStrokeWidth(borderWidth);
