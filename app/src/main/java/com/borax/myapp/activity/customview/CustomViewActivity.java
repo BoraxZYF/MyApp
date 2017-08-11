@@ -42,6 +42,17 @@ public class CustomViewActivity extends AppCompatActivity {
 
         roundButton.setSelected(true);
 
+        roundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                roundButton.setBorderWidth(10);
+                roundButton.setBg_color(getResources().getColor(R.color.colorAccent));
+
+            }
+        });
+
+
     }
 
 

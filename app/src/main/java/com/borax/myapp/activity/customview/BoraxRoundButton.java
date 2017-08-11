@@ -95,4 +95,39 @@ public class BoraxRoundButton extends android.support.v7.widget.AppCompatButton 
         super.onDraw(canvas);
     }
 
+    public int getBg_color() {
+        return bg_color;
+    }
+
+    public void setBg_color(int bg_color) {
+        this.bg_color = bg_color;
+        invalidate();
+    }
+
+    public float getCornerRadius() {
+        return cornerRadius;
+    }
+
+    public void setCornerRadius(float cornerRadius) {
+        this.cornerRadius = cornerRadius;
+        invalidate();
+    }
+
+    public float getBorderWidth() {
+        return borderWidth;
+    }
+
+    public void setBorderWidth(float borderWidth) {
+        this.borderWidth = borderWidth;
+        invalidate();
+    }
+
+    public int getBorderColor() {
+        return borderColor;
+    }
+
+    public void setBorderColor(int borderColor) {
+        this.borderColor = borderColor;
+        invalidate();
+    }
 }
