@@ -19,8 +19,6 @@ import retrofit2.Response;
 
 public class TestActivity extends AppCompatActivity {
 
-    @BindView(R.id.button)
-    Button button;
     @BindView(R.id.activity_test)
     RelativeLayout activityTest;
 
@@ -31,23 +29,4 @@ public class TestActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.button)
-    public void onViewClicked() {
-        API.SERVICE.getTest().enqueue(new Callback<BaseBean>() {
-            @Override
-            public void onResponse(Call<BaseBean> call, Response<BaseBean> response) {
-
-                Logger.d(response.message());
-                Logger.d(response.body().getData());
-
-            }
-
-            @Override
-            public void onFailure(Call<BaseBean> call, Throwable t) {
-
-                Logger.d(t.getMessage());
-
-            }
-        });
-    }
 }

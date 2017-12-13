@@ -46,4 +46,8 @@ public interface MPInterface {
     @POST("Apidata")
     Call<LongServiceTestBean> postLongService(@Field("data") String data);
 
+    @FormUrlEncoded
+    @POST("login")
+    Call<String> postTest(@Field("tel") long appUserId, @Field("pwd") String token);
+
 }

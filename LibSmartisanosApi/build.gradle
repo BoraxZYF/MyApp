@@ -7,7 +7,7 @@ def VERSIONCODE = 2
 def VERSIONNAME = "1.0.2"
 android {
     compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '26.0.2'
 
     sourceSets {
 
@@ -100,7 +100,7 @@ task proguardJar(dependsOn: ['buildJar'], type: ProGuardTask) {
     //输入 jar
     injars inJar
     //输出 jar
-//    outjars inJar.substring(0, inJar.lastIndexOf('/')) + "/proguard-${buildJar.archiveName}"
+    outjars inJar.substring(0, inJar.lastIndexOf('/')) + "/proguard-${buildJar.archiveName}"
     //设置不删除未引用的资源(类，方法等)
     dontshrink
     Plugin plugin = getPlugins().hasPlugin(AppPlugin) ?

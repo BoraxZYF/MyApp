@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
             , "MaterialDesign", "MaterialDesign4.x", "Rebel Test", "Encrypt Retrofit Test", "MVP Test", "Lottie"
             , "CaughtCrash", "OneStep", "Shengchong Test", "RecyclerViewPager", "Version Update", "Wave Test"
             , "Template Activity", "Pull To Refresh Activity", "Sainti", "WebView", "LongTimeService"
-            , "HenCoder", "CustomViewActivity"
+            , "HenCoder", "CustomViewActivity", "JBox2DActivity"
     };
     @BindView(R.id.toolbar)
     Toolbar toolbar;
